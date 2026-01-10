@@ -1,5 +1,7 @@
 import numpy as np
 
+def oscillator(t, rad, freq, phase=0):
+    return rad * np.exp(2j * (t + phase) * freq * np.pi)
 
 def compound(*vectors):
     return np.sum(vectors, axis=0)

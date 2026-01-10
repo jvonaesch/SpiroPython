@@ -1,4 +1,4 @@
 .gitignore
 *.log
-*.png
+#*.png
 !*_g.png

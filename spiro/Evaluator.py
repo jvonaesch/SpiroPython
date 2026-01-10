@@ -22,6 +22,9 @@ class Evaluator:
                 elif isinstance(arg, types.LambdaType):
                     logging.info(f"{self} generated input using lambda expression {arg}")
                     eval_args.append(arg(record.x))
+                elif arg == 't':
+                    logging.info(f"{self} used time as an input")
+                    eval_args.append(record.x)
                 else:
                     logging.info(f"{self} received numerical input")
                     eval_args.append(arg)
