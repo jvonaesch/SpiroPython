@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from spiro.EvaluationRecord import EvaluationRecord
-from spiro.pregenerated import wobbly_halo
+from spiro.Premade import wobbly_halo
 
 LOG_PATH = 'out/logs'
 

@@ -1,6 +1,6 @@
 import numpy as np
 
-from spiro.Actors import compound, lambda_osc, arms, oscillator
+from spiro.Functions import compound, lambda_osc, arms, oscillator
 from spiro.Evaluator import Evaluator
 
 
@@ -47,6 +47,33 @@ def skewed_halo():
     h = Evaluator(arms, (f, g, 1.5, 1.5), name='skewed_halo')
     return [h]
 
+def seven_blob():
+    base_1 = 1
+    base_2 = 600
+    offset = 7
+    g = Evaluator(compound, (
+        lambda_osc(2.1, base_1, phase=0.5),
+        lambda_osc(0.9, base_1 + offset, phase=0.25),
+        lambda_osc(0.2, base_2),
+        lambda_osc(0.5, base_2 + offset)
+    ), name='seven_blob')
+    return [g]
+
+def five_wobble():
+    base_1 = 1
+    base_2 = 500
+    offset = 5
+    f = Evaluator(compound, (
+        lambda_osc(2.5, base_1),
+        lambda_osc(0.7, base_1 + offset),
+        lambda_osc(0.2j, base_2),
+        lambda_osc(0.5, base_2 + offset * 3)
+    ), name='five_wobble')
+    g = Evaluator(arms, (
+        lambda_osc(0.5j, -1),
+        f, 2, 2), name='blobble')
+    return [f]
+
 def test_generator():
     f = Evaluator(compound, (
         lambda_osc(0.7, 1, 0.32),
@@ -59,3 +86,4 @@ def test_generator():
     ), name='small_comp_oscillator')
     h = Evaluator(arms, (f, g, 2.0, 2.0), name='test_gen')
     return [h]
+
