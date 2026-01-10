@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from spiro.PlotTools import save_dialog
-from spiro.Spiro import construct, Spiro
+from spiro.Spiro import construct_evaluators, Spiro
 
 N = 1000000
 DPI = 500
