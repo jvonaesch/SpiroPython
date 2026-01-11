@@ -6,7 +6,7 @@ def oscillator(t, rad, freq, phase=0):
 def compound(*vectors):
     return np.sum(vectors, axis=0)
 
-def arms(a, b, rad_a, rad_b):
+def arms(a, b, rad_a, rad_b, patch_disconnects=False):
     a = np.asarray(a, dtype=complex)
     b = np.asarray(b, dtype=complex)
     rad_a = np.asarray(rad_a, dtype=float)
@@ -16,9 +16,14 @@ def arms(a, b, rad_a, rad_b):
     u = (b - a) / d
 
     x = (rad_a ** 2 - rad_b ** 2 + d ** 2) / (2 * d)
-    mask = (rad_a ** 2 - x ** 2) < 0
-    y = np.sqrt(np.abs(rad_a ** 2 - x ** 2))
-    y[mask] = None
+
+    if patch_disconnects:
+        inner = rad_a ** 2 - x ** 2
+        y = np.sign(inner) * np.sqrt(np.abs(inner))
+    else:
+        mask = (rad_a ** 2 - x ** 2) < 0
+        y = np.sqrt(np.abs(rad_a ** 2 - x ** 2))
+        y[mask] = None
 
     delta1 = u * x + 1j * u * y
     delta2 = u * x - 1j * u * y

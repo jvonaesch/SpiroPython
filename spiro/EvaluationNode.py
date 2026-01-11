@@ -4,7 +4,7 @@ import types
 from spiro.EvaluationRecord import EvaluationRecord
 
 
-class Evaluator:
+class EvaluationNode:
 
     def __init__(self, func, args, name='eval'):
         self.func = func
@@ -16,7 +16,7 @@ class Evaluator:
         if vals is None:
             eval_args = []
             for arg in self.args:
-                if isinstance(arg, Evaluator):
+                if isinstance(arg, EvaluationNode):
                     logging.info(f"{self} requested input from {arg}")
                     eval_args.append(arg(record))
                 elif isinstance(arg, types.LambdaType):
@@ -35,4 +35,4 @@ class Evaluator:
         return record[self]
 
     def __str__(self):
-        return f"evaluator '{self.name}'"
+        return f"node '{self.name}'"

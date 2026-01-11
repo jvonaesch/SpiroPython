@@ -1,3 +1,6 @@
+import logging
+import types
+
 
 class EvaluationRecord:
 
@@ -19,3 +22,6 @@ class EvaluationRecord:
     @property
     def x(self):
         return self.__x
+
+    def __str__(self):
+        return f"EvaluationRecord"

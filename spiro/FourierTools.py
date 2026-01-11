@@ -8,18 +8,21 @@ def fourier_analyze(f, n=1000):
     c = np.fft.fft(y)
     c = np.fft.fftshift(c)
 
-    figure, axes = plt.subplots()
-    axes.semilogy(np.arange(-n+n//2, n//2), np.abs(c))
-    figure.legend("c")
-    figure.show()
+    fig, axs = plt.subplots(nrows=2)
+    axs[0].semilogy(np.arange(-n+n//2, n//2), np.abs(c))
+    axs[1].plot(np.arange(-n+n//2, n//2), np.angle(c))
+    fig.legend("c")
+    fig.show()
 
-def fourier_cut(f, n=1000, fac=0.1):
+def fourier_cut(f, n=1000, rel_tol=0, abs_tol=0, log_tol=0):
     x = np.linspace(0, 1, n)
     y = f(x)
     c = np.fft.fft(y)
 
     c_cut = c.copy()
-    c_cut[np.abs(c) < (fac * np.max(np.abs(c)))] = 0
+    c_cut[np.abs(c) < (rel_tol * np.max(np.abs(c)))] = 0
+    c_cut[np.abs(c) < abs_tol] = 0
+    c_cut[np.log(np.abs(c)) <= (log_tol * np.log(np.max(np.abs(c))))] = 0
     return c_cut
 
 def fourier_extend(c, n):
