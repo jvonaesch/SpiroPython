@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9c991ea-0569-41a1-9c35-cda048ae7738" name="Changes" comment="Testing fourier series of complicated arm patterns">
+    <list default="true" id="d9c991ea-0569-41a1-9c35-cda048ae7738" name="Changes" comment="Improved the Spiro's capability to show EvaluationNode output, lists of vertices, and output from lambda functions of n=#bases">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spiro/EvaluationNode.py" beforeDir="false" afterPath="$PROJECT_DIR$/spiro/EvaluationNode.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spiro/FourierTools.py" beforeDir="false" afterPath="$PROJECT_DIR$/spiro/FourierTools.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spiro/Spiro.py" beforeDir="false" afterPath="$PROJECT_DIR$/spiro/Spiro.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +134,15 @@
       <option name="project" value="LOCAL" />
       <updated>1768136290264</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Improved the Spiro's capability to show EvaluationNode output, lists of vertices, and output from lambda functions of n=#bases">
+      <option name="closed" value="true" />
+      <created>1768147433726</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1768147433726</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -146,6 +151,7 @@
     <MESSAGE value="Finished first Evaluator implementation" />
     <MESSAGE value="Cleaned up file system" />
     <MESSAGE value="Testing fourier series of complicated arm patterns" />
-    <option name="LAST_COMMIT_MESSAGE" value="Testing fourier series of complicated arm patterns" />
+    <MESSAGE value="Improved the Spiro's capability to show EvaluationNode output, lists of vertices, and output from lambda functions of n=#bases" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved the Spiro's capability to show EvaluationNode output, lists of vertices, and output from lambda functions of n=#bases" />
   </component>
 </project>
