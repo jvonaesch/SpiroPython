@@ -1,4 +1,5 @@
 import logging
+import numpy as np
 import types
 
 from spiro.EvaluationRecord import EvaluationRecord
@@ -11,7 +12,18 @@ class EvaluationNode:
         self.args = args
         self.name = name
 
-    def __call__(self, record: EvaluationRecord):
+    def __call__(self, x):
+        return self.evaluate(x)
+
+    def evaluate(self, x):
+        if isinstance(x, EvaluationRecord):
+            return self.record_evaluate(x)
+        elif isinstance(x, int):
+            x = np.linspace(0, 1, x)
+        record = EvaluationRecord(x)
+        return self.record_evaluate(record)
+
+    def record_evaluate(self, record: EvaluationRecord):
         vals = record[self]
         if vals is None:
             eval_args = []

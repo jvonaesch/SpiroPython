@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9c991ea-0569-41a1-9c35-cda048ae7738" name="Changes" comment="Cleaned up file system">
+    <list default="true" id="d9c991ea-0569-41a1-9c35-cda048ae7738" name="Changes" comment="Testing fourier series of complicated arm patterns">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spiro/EvaluationRecord.py" beforeDir="false" afterPath="$PROJECT_DIR$/spiro/EvaluationRecord.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spiro/Evaluator.py" beforeDir="false" afterPath="$PROJECT_DIR$/spiro/EvaluationNode.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spiro/EvaluationNode.py" beforeDir="false" afterPath="$PROJECT_DIR$/spiro/EvaluationNode.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spiro/FourierTools.py" beforeDir="false" afterPath="$PROJECT_DIR$/spiro/FourierTools.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spiro/Functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/spiro/Functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spiro/PlotTools.py" beforeDir="false" afterPath="$PROJECT_DIR$/spiro/PlotTools.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spiro/Premade.py" beforeDir="false" afterPath="$PROJECT_DIR$/spiro/Premade.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spiro/Spiro.py" beforeDir="false" afterPath="$PROJECT_DIR$/spiro/Spiro.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -125,7 +121,23 @@
       <option name="project" value="LOCAL" />
       <updated>1768068914466</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Testing fourier series of complicated arm patterns">
+      <option name="closed" value="true" />
+      <created>1768136281842</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1768136281842</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Testing fourier series of complicated arm patterns">
+      <option name="closed" value="true" />
+      <created>1768136290264</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1768136290264</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -133,6 +145,7 @@
     <MESSAGE value="implemented modular Evaluator that save function values in EvaluationRecord" />
     <MESSAGE value="Finished first Evaluator implementation" />
     <MESSAGE value="Cleaned up file system" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up file system" />
+    <MESSAGE value="Testing fourier series of complicated arm patterns" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testing fourier series of complicated arm patterns" />
   </component>
 </project>

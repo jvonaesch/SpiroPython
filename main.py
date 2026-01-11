@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from spiro import Premade
 from spiro.EvaluationNode import EvaluationNode
 from spiro.EvaluationRecord import EvaluationRecord
-from spiro.FourierTools import fourier_analyze, fourier_extend, fourier_cut
+from spiro.FourierTools import fourier_analyze, fourier_extend, fourier_cut, fourier_approximate
 from spiro.Functions import compound
 from spiro.PlotTools import save_dialog
 from spiro.Spiro import Spiro
@@ -14,21 +14,12 @@ DPI = 500
 
 if __name__ == "__main__":
 
-    wings_func = lambda x: Premade.wings(EvaluationRecord(x))
-    fourier_analyze(wings_func, 500000)
+    fourier_analyze(Premade.wobbly_halo, 1000000, title='Wobbly Halo')
+    #fourier_analyze(Premade._wobbly_halo_arm_1, 10000, title='Rotation Arm')
 
-    spiro = Spiro(root_nodes={
-        node.name: node for node in (
-            #Premade._wings_base_0,
-            #Premade._wings_arms_0,
-            EvaluationNode(compound, [
-                lambda x: fourier_extend(fourier_cut(wings_func, 500000, log_tol=0.2), len(x))
-            ], name='fourier log. tol 1'),
-            EvaluationNode(compound, [
-                lambda x: fourier_extend(fourier_cut(wings_func, 500000, abs_tol=1), len(x))
-            ], name='fourier abs. tol 1'),
-            Premade.wings,
-        )
+    spiro = Spiro(plot_sources={
+        'Wings': Premade.wings,
+        #'Wings Approx': lambda n: fourier_approximate(Premade.wings, 500000, n, log_rel_tol=0.3)
     })
 
     figures = spiro.plot(N, save_option=False)
